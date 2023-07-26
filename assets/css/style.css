@@ -1,0 +1,568 @@
+@font-face {
+    font-family: astonpoliz;
+    src: url(../fonts/Astonpoliz/Astonpoliz.otf),url(../fonts/Astonpoliz/Astonpoliz.ttf);
+}
+*{
+    list-style: none;
+    text-decoration: none;
+    font-family: astonpoliz;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: #183059;
+    margin: 0;
+    color: #F6F4F3;
+    /* background-image: url(../img/dark-bg.jpg); */
+}
+h1{
+    font-size: 50px;
+    font-weight: bold;
+    color: #d9af23;
+    text-align: center;
+}
+/* tous les icons sont en couleur blanc et de taille 30px*/
+i{
+    font-size: 30px;
+    color: #F6F4F3;
+}
+/* enlever tous les padding de ul */
+ul{
+    padding: 0;
+}
+/*touche mode ddark et mode light*/
+.mode{
+    position:fixed;
+    top:50%;
+    bottom:50%;
+    right: 60px;
+    z-index: 2;
+}
+.mode img{
+    width: 50px;
+    height: 50px;
+}
+.light-mode,.dark-mode{
+    position: absolute;
+    display: flex;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.light-mode{
+    z-index: -2;
+    background:#000; 
+}
+.dark-mode{
+    z-index: 2;
+    background: #fff;
+}
+
+/*background imge et video*/
+.bg-video,.bg-img img{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        z-index: -1;
+    }
+    .bg-img {
+        visibility: hidden;
+    }
+
+
+/*css header  */
+header{
+    width: 100%;
+    height: 50px;
+    color: #F6F4F3;
+    display: flex;
+    position: sticky;
+    z-index: 2;
+    top: 0;
+    background-color: #011936;
+}
+header a{
+    color: #F6F4F3;
+}
+header .user{
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+}
+/*Menu pour small device*/
+.menu{
+    position: absolute;
+    top: -100px;
+    cursor: pointer;
+}
+.menu-toogle{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-toogle{
+    display: none;
+    text-align: center;
+}
+.menu-toogle h2{
+    color: #d9af23;
+    font-size: 35px;
+}
+.link-toggle span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    text-align: center;
+}
+/* .link-toggle ul li a{
+    padding: 10px;
+}  */
+.user img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+/* navbar :acceuil ,a propos,competence, education,contact positionné à droite  */
+.navbar{
+    position: absolute;
+    right: 10px;
+    padding: 15px 0; 
+}
+/* mettre les navbar cote à cote */
+.navbar .link{
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+.navbar .link span{
+    margin-right: 40px;
+    position: relative;
+}
+.navbar .link a{
+    padding: 10px; 
+}
+.navbar a:hover{
+    color: #183059;
+    background: #d9af23;
+    border-radius: 20px;
+}
+
+.container{
+    position: relative;
+}
+.container-toogle{
+    display: none;
+}
+.menu-click{
+    display: block;
+}
+.footer-container{
+     display: block; 
+}
+.footer-toogle{
+    display: none;
+}
+/* css div container */
+/* page d'acceuil */
+.home-page{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+
+.home-page .home-container{
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    text-align: center;
+}
+ .title{
+    width: 100%;
+} 
+.title h2{
+    margin: 80px 0;
+    text-align: center;
+}
+.title h2 {
+    color: #F6F4F3;
+    font-size: 50px;
+
+    
+}
+.title h2 #titre{
+    color: #d9af23;
+    font-size: 30px;
+}
+.title #btn{
+    color: #141414; 
+    background: #d9af23;
+    border-radius: 20px;
+    padding: 10px 40px;
+}
+ .title #btn:hover{
+    color: #141414;
+    background: #F6F4F3;
+}
+#btn i{
+    font-size:20px; 
+    color: #011936;
+}
+i:hover{
+    color: #d9af23;
+}
+/* manipulation des icons reseaux sociaux */
+.social ul{
+    display: flex;
+    justify-content:space-around;
+}
+.social{
+    width: 600px;
+    align-items: end;
+}
+.social ul li {
+    margin: 0 20px;
+}
+.social ul li i{
+    font-size: 40px;
+}
+.about-me .user-1 img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+/* div about_me */
+.about-me{
+    display: flex;   
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    padding: 100px 0;
+}
+.about-me .bio{
+    width: 50%;
+}
+.about-me .bio #nom{
+    color: #d9af23;
+}
+.about-me .bio div .texte{
+    margin-bottom:30px ;
+}
+.about-me .bio a{
+    color: #011936;
+    background: #d9af23;
+    border-radius: 20px;
+    margin-top: 50px;
+    padding: 10px 30px;
+}
+.about-me .bio a:hover{
+    color: #011936;
+    background: #F6F4F3;
+}
+.download i{
+    font-size:20px; 
+    color: #011936;
+}
+/* bloc competence */
+.skills-container {
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding-top: 20px;
+}
+.skills{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-top: 20px;
+}
+.icon-skills{
+    text-align: center;
+}
+.icon-skills div{
+    margin: 10px;
+    font-size: 25px;
+}
+.icon-skills img{
+    width: 200px;
+    height: 200px;
+
+    border: solid 2px #F6F4F3;
+    box-shadow: 4px 2px 5px #F6F4F3;
+    border-radius: 20px;
+}
+/* bloc education */
+.education{
+    width: 100%;
+    padding-top: 20px;
+}
+.education-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding:0 50px;
+}
+.education-container-1{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.education h1 i{
+    font-size:50px ;
+}
+.education .education1{
+    width: 320px;
+    height: 320px;
+    font-size: 30px;
+    text-align: center;
+    border: solid 2px #F6F4F3;
+    border-radius: 20px;
+    box-shadow: 4px 2px 5px #F6F4F3;
+    margin: 20px;
+    padding:0 10px;
+}
+.education1 h4{
+    color: #d9af23;
+}
+/* section Contact */
+.contact{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+     align-items: center; 
+    text-align: center; 
+    margin-top: 50px;
+}
+#contact{
+    position: absolute;
+    top: -50px;
+    width: 1px;
+    height: 1px;
+}
+.contact-container h1{
+    margin-bottom: 5px;
+}
+.contact-container{
+    width: 70%; 
+    border-radius: 20px;
+    border: solid 1px #F6F4F3;
+    box-shadow: 2px 2px 2px #F6F4F3;
+    padding-bottom: 50px;
+}
+.form-group{
+    width: 100%;
+}
+.contact-container input,textarea{
+    width:80%;
+    height: 50px;
+    margin: 10px;
+    padding: 0 10px;
+    border: none;
+    border-radius: 20px;
+}
+input:focus{
+    outline:2px solid #d9af23;
+}
+ textarea:focus{
+    outline: 2px solid #d9af23;
+}
+.contact-container textarea{
+    width: 80%;
+     height: 80px; 
+    padding: 20px 10px;
+    margin-bottom: 30px;
+}
+/* form{
+    width: 100%;
+} */
+form .send{
+    color: #011936;   
+    background: #d9af23;
+    border-radius: 20px;
+    padding: 10px 40px;
+    margin-top: 30px;
+}
+.form-group .send:hover{
+    color: #011936;
+    background: #F6F4F3;
+}
+footer{
+    width: 100%;
+    height: 100px;
+    font-weight: bold;
+    padding-top: 15px;
+    margin-top: 50px;
+}
+footer{
+    position: relative;
+    background: #F6F4F3;
+    color: #011936;
+    opacity: 0.5;
+}
+.footer ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.footer ul li i {
+    color:#011936;
+    padding:0 10px;
+}
+.footer a{
+    color: #011936;
+}
+/* commentaire */
+@media(min-width:930px){
+    .form-group{
+        width: 100%;
+    }
+    .form-group input,textarea{
+        width:50%;
+        height: 50px;
+        border: solid 1px #5d535c;
+        border-radius: 20px;
+        margin: 10px;
+        padding: 0 10px;
+    }    
+}
+/* media query : responsivité*/
+@media( max-width :930px){
+    .link{
+        visibility: hidden;
+    }
+    .menu{
+         top: 10px; 
+         right: 40px; 
+    }
+    h1{
+        font-size: 30px;
+        padding-top: 20px;
+    }
+    .education h1 i{
+        font-size: 30px;
+    }
+    
+    .form-group{
+        width: 100%;
+    }
+    .form-group input,textarea{
+        width:60%;
+        height: 50px;
+        border: solid 1px #5d535c;
+        border-radius: 20px;
+        padding: 0 10px;
+        margin: 10px;
+    }
+    .send{
+        width: 100%;
+    } 
+}
+@media(max-width: 600px){
+    .social{
+        width: 300px;
+    }
+    .about-me{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding:0;
+    }
+    .user-1{
+        width: fit-content;
+        justify-content: center;
+        margin: auto;
+        margin-top: 50px;
+    }
+    .user-1 img{
+        width: 100px;
+        height: 200px;
+    }
+    .about-me .bio{
+        width: 90%;
+        justify-content: center;
+        margin: auto;
+    }
+    .bio .download{
+        text-align: center;
+    }
+    .education1{
+        width: 200px;
+        height: 200px;
+        font-size: 20px;
+        padding: 5px;
+    }
+    .contact-container{
+        width: 90%;
+    }
+    form input,textarea{
+        width:90%;
+        height: 50px;
+    }       
+    .send{
+        width: 100%;
+    } 
+    footer{
+        height: 140px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        padding: 0 10px;
+        padding-top:5px;
+        
+    }
+     .footer ul{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    } 
+}
+   @media(max-width:320px){
+    .home-page{
+        height: 100vh;
+    }
+    .education .education1{
+        width: 280px;
+        height: 280px;
+        padding:0 px;
+        margin: 20px;
+    }
+    .title h2{
+        margin-bottom: 20px;
+    }
+    .social{
+        width: 150px;
+        margin: 20px 0;
+    }
+   }
